@@ -29,7 +29,15 @@ return str?.length > n ? str.substr(0,n-1)+'...':str;
       style={{
         backgroundSize: "cover",
         backgroundImage: movie?.backdrop_path
-          ? `url('https://image.tmdb.org/t/p/original${movie.backdrop_path}')`
+          ?
+        
+           `       linear-gradient(
+          180deg,
+          transparent 50%,
+          rgba(37, 37, 37, 0.91) 85%,
+          #111 100%
+        ),
+        url('https://image.tmdb.org/t/p/original${movie.backdrop_path}')`
           : "none",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
